@@ -4,10 +4,7 @@ if exist "depot_tools\" (
 	call :gitclone
 )
 
-
-set PATH=%PATH%;%CD%\depot_tools
-
-exit /b
+exit
 
 rem =================================================
 rem subrutine
@@ -15,6 +12,7 @@ rem =================================================
 :gitclone
 echo "clone for google depot tools"
 git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+set PATH=%PATH%;%CD%\depot_tools
 fetch v8
 exit /b
 
