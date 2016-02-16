@@ -1,10 +1,12 @@
+echo off
+
 if exist "depot_tools\" (
 	echo "not clone"
 ) else (
 	call :gitclone
 )
 
-exit
+exit /b
 
 rem =================================================
 rem subrutine
