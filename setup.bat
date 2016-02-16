@@ -6,7 +6,6 @@ if exist "depot_tools\" (
 
 
 set PATH=%PATH%;%CD%\depot_tools
-fetch v8
 
 exit /b
 
@@ -16,6 +15,6 @@ rem =================================================
 :gitclone
 echo "clone for google depot tools"
 git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
-
+fetch v8
 exit /b
 
